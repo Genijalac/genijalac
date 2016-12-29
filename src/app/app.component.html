@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<ul>
+	<li>
+		<a [routerLink]="['']">Prvi</a>
+		<a [routerLink]="['','mat1']">Drugi</a>
+		<a [routerLink]="['','mat1','pravac']">Treći</a>
+		<a [routerLink]="['','mat1','pravac','lekcija1']">Četvrti</a>
+		
+		</li>
+</ul>
+
+<router-outlet></router-outlet>

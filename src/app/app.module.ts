@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { DatabaseService } from './database.service'
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NaslovnaComponent } from './naslovna/naslovna.component';
@@ -12,21 +14,27 @@ import { PovijestComponent } from './povijest/povijest.component';
 import { YoutubeComponent } from './youtube/youtube.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NaslovnaComponent,
-    CjelineComponent,
-    LekcijeComponent,
-    LekcijaComponent,
-    PovijestComponent,
-    YoutubeComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NaslovnaComponent,
+        CjelineComponent,
+        LekcijeComponent,
+        LekcijaComponent,
+        PovijestComponent,
+        YoutubeComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        RouterModule.forRoot([
+            { path: '', component: NaslovnaComponent },
+            { path: ':predmet', component: CjelineComponent },
+            { path: ':predmet/:cjelina', component: LekcijeComponent },
+            { path: ':predmet/:cjelina/:naslov', component: LekcijaComponent }
+        ])
+    ],
+    providers: [DatabaseService],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
