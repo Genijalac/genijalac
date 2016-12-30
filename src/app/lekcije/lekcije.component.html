@@ -1,2 +1,20 @@
+<main>
+  <div class="container">
+    <h2 class="title">{{Cjelina}}</h2>
+    <povijest></povijest>
+    <div class="flex-list">
 
- <pre > {{lekcije  | json}}</pre>
+      <div class="accordion" *ngFor="let item of lekcije">
+        <div class="header"> <b>{{item.naslov}}</b></div>
+        <a *ngFor="let i of item.sadrzaj" [routerLink]="[cjelina,i.link]"><i [ngClass]="i['tip']"></i><span>Definicija pravca</span></a>
+  
+      </div>
+
+
+    </div>
+  </div>
+<div>
+	<pre>{{lekcije | json }}</pre>
+</div>
+
+</main>
