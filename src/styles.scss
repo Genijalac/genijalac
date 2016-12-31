@@ -85,7 +85,8 @@ main .flex {
 }
 @media screen and (min-width: 600px) {
   main .flex {
-    height: 80vh;
+    height: 90vh;
+    max-height: 1000px;
   }
 }
 main .flex .box {
@@ -131,8 +132,8 @@ main .flex .box p {
   margin-top: 0;
 }
 main .flex .box:nth-of-type(1) {
-  background: -webkit-linear-gradient(rgba(249, 125, 118, 0.9), rgba(249, 125, 118, 0.95)), url("http://image.shutterstock.com/z/stock-vector-hand-draw-math-symbols-55728286.jpg");
-  background: linear-gradient(rgba(249, 125, 118, 0.9), rgba(249, 125, 118, 0.95)), url("http://image.shutterstock.com/z/stock-vector-hand-draw-math-symbols-55728286.jpg");
+  background: -webkit-linear-gradient(rgba(249, 125, 118, 0.9), rgba(249, 125, 118, 0.95)), url("assets/images/bg1.jpg");
+  background: linear-gradient(rgba(249, 125, 118, 0.9), rgba(249, 125, 118, 0.95)), url("assets/images/bg1.jpg");
   background-size: cover;
 }
 main .flex .box:nth-of-type(1) h3 {
@@ -143,8 +144,8 @@ main .flex .box:nth-of-type(1) p {
   opacity: .8;
 }
 main .flex .box:nth-of-type(2) {
-  background: -webkit-linear-gradient(rgba(125, 203, 239, 0.9), rgba(125, 203, 239, 0.95)), url("https://thumb7.shutterstock.com/display_pic_with_logo/1788713/409948435/stock-photo-seamless-endless-pattern-background-with-handwritten-mathematical-formulas-math-relationship-or-409948435.jpg");
-  background: linear-gradient(rgba(125, 203, 239, 0.9), rgba(125, 203, 239, 0.95)), url("https://thumb7.shutterstock.com/display_pic_with_logo/1788713/409948435/stock-photo-seamless-endless-pattern-background-with-handwritten-mathematical-formulas-math-relationship-or-409948435.jpg");
+  background: -webkit-linear-gradient(rgba(125, 203, 239, 0.9), rgba(125, 203, 239, 0.95)), url("assets/images/bg2.jpg");
+  background: linear-gradient(rgba(125, 203, 239, 0.9), rgba(125, 203, 239, 0.95)), url("assets/images/bg2.jpg");
   background-size: cover;
 }
 main .flex .box:nth-of-type(2) h3 {
@@ -155,8 +156,8 @@ main .flex .box:nth-of-type(2) p {
   opacity: .8;
 }
 main .flex .box:nth-of-type(3) {
-  background: -webkit-linear-gradient(rgba(107, 209, 157, 0.9), rgba(107, 209, 157, 0.95)), url("https://thumb7.shutterstock.com/display_pic_with_logo/1788713/409948435/stock-photo-seamless-endless-pattern-background-with-handwritten-mathematical-formulas-math-relationship-or-409948435.jpg");
-  background: linear-gradient(rgba(107, 209, 157, 0.9), rgba(107, 209, 157, 0.95)), url("https://thumb7.shutterstock.com/display_pic_with_logo/1788713/409948435/stock-photo-seamless-endless-pattern-background-with-handwritten-mathematical-formulas-math-relationship-or-409948435.jpg");
+  background: -webkit-linear-gradient(rgba(107, 209, 157, 0.9), rgba(107, 209, 157, 0.95)), url("assets/images/bg5.jpg");
+  background: linear-gradient(rgba(107, 209, 157, 0.9), rgba(107, 209, 157, 0.95)), url("assets/images/bg5.jpg");
   background-size: cover;
 }
 main .flex .box:nth-of-type(3) h3 {
@@ -167,8 +168,9 @@ main .flex .box:nth-of-type(3) p {
   opacity: .8;
 }
 main .flex .box:nth-of-type(4) {
-  background: -webkit-linear-gradient(rgba(255, 179, 93, 0.9), rgba(255, 179, 93, 0.95)), url("https://cdn.vectorstock.com/i/composite/68,13/seamless-background-math-formulas-vector-616813.jpg");
-  background: linear-gradient(rgba(255, 179, 93, 0.9), rgba(255, 179, 93, 0.95)), url("https://cdn.vectorstock.com/i/composite/68,13/seamless-background-math-formulas-vector-616813.jpg");
+  background: -webkit-linear-gradient(rgba(255, 179, 93, 0.9), rgba(255, 179, 93, 0.95)), url("assets/images/bg4.jpg");
+  background: linear-gradient(rgba(255, 179, 93, 0.9), rgba(255, 179, 93, 0.95)), url("assets/images/bg4.jpg");
+  background-size: cover;
 }
 main .flex .box:nth-of-type(4):hover {
   background-color: #ffa744;
@@ -181,8 +183,8 @@ main .flex .box:nth-of-type(4) p {
   opacity: .8;
 }
 main .flex .box:nth-of-type(5) {
-  background: -webkit-linear-gradient(rgba(102, 205, 213, 0.9), rgba(102, 205, 213, 0.95)), url("https://thumb7.shutterstock.com/display_pic_with_logo/1788713/409948435/stock-photo-seamless-endless-pattern-background-with-handwritten-mathematical-formulas-math-relationship-or-409948435.jpg");
-  background: linear-gradient(rgba(102, 205, 213, 0.9), rgba(102, 205, 213, 0.95)), url("https://thumb7.shutterstock.com/display_pic_with_logo/1788713/409948435/stock-photo-seamless-endless-pattern-background-with-handwritten-mathematical-formulas-math-relationship-or-409948435.jpg");
+  background: -webkit-linear-gradient(rgba(102, 205, 213, 0.9), rgba(102, 205, 213, 0.95)), url("assets/images/bg3.jpg");
+  background: linear-gradient(rgba(102, 205, 213, 0.9), rgba(102, 205, 213, 0.95)), url("assets/images/bg3.jpg");
   background-size: cover;
 }
 main .flex .box:nth-of-type(5) h3 {
@@ -266,7 +268,15 @@ main .flex-list .accordion div i.video, main .flex-list .accordion a i.video {
   width: 20px;
   height: 20px;
   margin-right: .5rem;
-  background: url("https://cdn3.iconfinder.com/data/icons/complete-set-icons/512/video512x512.png");
+  background: url("assets/images/video.svg");
+  background-size: cover;
+}
+main .flex-list .accordion div i.zadatak, main .flex-list .accordion a i.zadatak {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: .5rem;
+  background: url("assets/images/digitron.svg");
   background-size: cover;
 }
 main .flex-list .accordion div:not(:last-of-type), main .flex-list .accordion a:not(:last-of-type) {

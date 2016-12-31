@@ -9,10 +9,9 @@ var assets = (!dev) ? 'src/assets/data' : 'DB';
 var files = fsx.walkSync('database/');
 
 (function kreirajLekcije() {
-    for (var i = files.length - 1; i >= 0; i--) {
-    	// ZA SVAKI FILE KONVERTIRA GA U JSON
+    for (var i = 0; i < files.length; i++) {
+        // ZA SVAKI FILE KONVERTIRA GA U JSON
         var data = yamlFront.loadFront(fs.readFileSync(files[i], 'utf-8'));
-        console.log(files[i],'\n' ,data);
         // AKO FILE SADRŽI .yaml
         if (files[i].indexOf('.yaml') !== -1) {
             var url = '/' + data["predmet"].toLowerCase() + '/' + data["cjelina"].toLowerCase() + '/' + data["slag"].toLowerCase();
@@ -20,4 +19,7 @@ var files = fsx.walkSync('database/');
             db.push('/', data)
         }
     }
+    fsx.copy('database/meta.json', assets + '/meta.json', function(err, data) {
+        if (err) { console.log(err); }
+    })
 })();

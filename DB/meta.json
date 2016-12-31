@@ -1,0 +1,27 @@
+{
+    "data": {
+        "mat1": {
+        	"predmet": ["Matematika 1","mat1"],
+        	"cjeline": [
+        		{
+        			"cjelina":["Potencije","potencije"],
+        			"data": [
+        				{
+        					"lekcija":["Što su potencije","sto-su-potencije"],
+        					"data": [
+        						{
+        							"jedinica": ["Definicija potencije","definicija-potencije"],
+        							"tip":"video"
+        						},
+        						{
+        							"jedinica": ["Zadaci","zadaci-1"],
+        							"tip":"zadaci"
+        						}
+        					]
+        				}
+        			]
+        		}
+        	]
+        }
+    }
+}

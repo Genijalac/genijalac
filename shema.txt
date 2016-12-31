@@ -1,0 +1,9 @@
+DB
+ - Predmet (/:predmet)
+  meta.json (popis cjelina, linkovi, nazivi) {data:[{cjelina: ['Pravac','pravac']}]}
+  - Cjelina (/:predmet/:cjelina)
+   meta.json (popis lekcija, linkovi, nazivi)
+   -Lekcija (/:predmet/:cjelina/:lekcija) {data:[{lekcija: ['Pravac','pravac']}]}
+    meta.json (popis vid/vježbi, linkovi, nazivi)
+   	- video/vježbe (/:predmet/:cjelina/:lekcija/:unit)
+

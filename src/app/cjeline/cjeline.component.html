@@ -1,7 +1,6 @@
 <main>
     <div class="container">
         <h2 class="title">{{predmetFull}}</h2>
-        <povijest [meta]="meta"></povijest>	
         <div class="flex-list">
             
             <a [routerLink]="['', predmet, item.link]" *ngFor="let item of cjeline" class="box"> <b>{{item.naslov}}</b></a>
