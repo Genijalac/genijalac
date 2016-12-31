@@ -9,6 +9,10 @@ export class CjelineComponent implements OnInit {
     predmet;
     predmetFull;
     cjeline;
+    meta = {
+        predmet: this.predmet,
+        predmetFull: this.predmetFull
+    }
     constructor(private db: DatabaseService,
         private route: ActivatedRoute) {}
 

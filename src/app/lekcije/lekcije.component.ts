@@ -10,6 +10,10 @@ export class LekcijeComponent implements OnInit {
 predmet;
 cjelina;
 lekcije;
+meta = {
+  predmet: this.predmet,
+  cjelina: this.cjelina
+}
   constructor(private db: DatabaseService,
     	private route: ActivatedRoute) { }
 

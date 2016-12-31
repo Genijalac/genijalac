@@ -1,12 +1,12 @@
 <main>
   <div class="container">
-    <h2 class="title">{{Cjelina}}</h2>
-    <povijest></povijest>
+    <h2 class="title">{{cjelina}}</h2>
+ <povijest></povijest>  
     <div class="flex-list">
 
       <div class="accordion" *ngFor="let item of lekcije">
         <div class="header"> <b>{{item.naslov}}</b></div>
-        <a *ngFor="let i of item.sadrzaj" [routerLink]="[cjelina,i.link]"><i [ngClass]="i['tip']"></i><span>Definicija pravca</span></a>
+        <a *ngFor="let i of item.sadrzaj" [routerLink]="[i.link]"><i [ngClass]="i['tip']"></i><span>Definicija pravca</span></a>
   
       </div>
 
