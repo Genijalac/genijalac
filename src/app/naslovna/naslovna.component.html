@@ -1,17 +1,17 @@
 <main>
 <div class="container">
   <div class="flex">
-    <a [routerLink]="['','mat1']" class="box">
+    <a *ngIf="mat1" [routerLink]="['','mat1']" class="box">
       <h3>Matematika</h3>
       <p>1. razred</p>
     </a>
-    <a [routerLink]="['','mat2']" class="box"> <h3>Matematika</h3>
+    <a *ngIf="mat2" [routerLink]="['','mat2']" class="box"> <h3>Matematika</h3>
       <p>2. razred</p></a>
-    <a [routerLink]="['','mat3']" class="box"> <h3>Matematika</h3>
+    <a *ngIf="mat3" [routerLink]="['','mat3']" class="box"> <h3>Matematika</h3>
       <p>3. razred</p></a>
-    <a [routerLink]="['','mat4']" class="box"> <h3>Matematika</h3>
+    <a  *ngIf="mat4" [routerLink]="['','mat4']" class="box"> <h3>Matematika</h3>
       <p>4. razred</p></a>
-    <a [routerLink]="['','fiz2']" class="box"> <h3>Fizika</h3>
+    <a *ngIf="fiz2" [routerLink]="['','fiz2']" class="box"> <h3>Fizika</h3>
       <p>2. razred</p></a>
   </div>
 </div>

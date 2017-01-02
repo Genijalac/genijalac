@@ -1,14 +1,8 @@
 <main>
     <div class="container">
-        <h2 class="title">{{predmetFull}}</h2>
+        <h2 class="title">{{predmet}}</h2>
         <div class="flex-list">
-            
-            <a [routerLink]="['', predmet, item.link]" *ngFor="let item of cjeline" class="box"> <b>{{item.naslov}}</b></a>
-            
-            
+            <a [routerLink]="['', predmetLink, item['cjelina'][1]]" *ngFor="let item of data" class="box"> <b>{{item["cjelina"][0]}}</b></a>
         </div>
     </div>
-    <div>
-	<pre>{{cjeline | json }}</pre>
-</div>
 </main>

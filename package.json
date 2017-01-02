@@ -21,6 +21,7 @@
     "@angular/platform-browser": "2.0.0",
     "@angular/platform-browser-dynamic": "2.0.0",
     "@angular/router": "3.0.0",
+    "@types/underscore": "^1.7.36",
     "core-js": "^2.4.1",
     "fs-extra": "^1.0.0",
     "node-json-db": "^0.7.3",

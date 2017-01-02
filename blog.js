@@ -59,10 +59,9 @@ var predmeti = ["mat1", "mat2", "mat3", "mat4", "fiz2"];
 
 for (var i = 0; i < predmeti.length; i++) {
 
-    var jedinice = _.where(objectRepresentation, { "predmetLink": predmeti[0] });
+    var jedinice = _.where(objectRepresentation, { "predmetLink": predmeti[i] });
     var shema = [];
     var grupiraneCjeline = _.groupBy(jedinice, 'cjelinaName')
-    console.log(grupiraneCjeline);
     _.each(grupiraneCjeline, function(item, key, list) {
         var cjelina = { "cjelina": [key, key.toLowerCase().replace(/\s/gi, "-").replace(/ž/gi, "z")], data: [] };
         var lekcije = getLekcijeFromCjeline(item);
@@ -71,7 +70,7 @@ for (var i = 0; i < predmeti.length; i++) {
         })
         shema.push(cjelina)
     })
-    metaDB.push(dataStart + predmeti[0] + '/cjeline', shema)
+    metaDB.push(dataStart + predmeti[i] + '/cjeline', shema)
 }
 
 function getLekcijeFromCjeline(jedinice) {

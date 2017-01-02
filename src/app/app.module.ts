@@ -31,7 +31,7 @@ import { YoutubeComponent } from './youtube/youtube.component';
             { path: '', component: NaslovnaComponent },
             { path: ':predmet', component: CjelineComponent },
             { path: ':predmet/:cjelina', component: LekcijeComponent },
-            { path: ':predmet/:cjelina/:naslov', component: LekcijaComponent }
+            { path: ':predmet/:cjelina/:lekcija/:jedinica', component: LekcijaComponent }
         ])
     ],
     providers: [DatabaseService],
