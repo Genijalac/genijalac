@@ -1,1 +1,5 @@
-<p><a routerLink="">Naslovna</a><i> / </i><a href="#">Predmet</a><i> / </i><a href="#">Cjelina</a><i> / </i><a href="#">Lekcija</a></p>
+<p>
+    <a routerLink="">Naslovna</a>
+    <i *ngIf="cjelina"> / </i><a *ngIf="cjelina" [routerLink]="['', predmetLink]">{{predmetName}}</a>
+    <i *ngIf="jedinica"> / </i><a *ngIf="jedinica" [routerLink]="['', predmetLink, cjelinaLink]">{{cjelinaName}}</a>
+</p>

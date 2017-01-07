@@ -31,6 +31,7 @@ import { YoutubeComponent } from './youtube/youtube.component';
             { path: '', component: NaslovnaComponent },
             { path: ':predmet', component: CjelineComponent },
             { path: ':predmet/:cjelina', component: LekcijeComponent },
+            { path: ':predmet/:cjelina/:lekcija',   redirectTo: ':predmet/:cjelina', pathMatch: 'full' },
             { path: ':predmet/:cjelina/:lekcija/:jedinica', component: LekcijaComponent }
         ])
     ],

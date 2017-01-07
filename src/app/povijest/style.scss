@@ -1,0 +1,7 @@
+a {
+	text-decoration: none;
+	line-height: 1.4;
+	&:hover {
+		text-decoration: underline;
+	}
+}

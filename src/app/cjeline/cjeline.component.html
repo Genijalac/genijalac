@@ -1,6 +1,7 @@
 <main>
     <div class="container">
         <h2 class="title">{{predmet}}</h2>
+        <povijest></povijest>		
         <div class="flex-list">
             <a [routerLink]="['', predmetLink, item['cjelina'][1]]" *ngFor="let item of data" class="box"> <b>{{item["cjelina"][0]}}</b></a>
         </div>

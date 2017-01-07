@@ -5,13 +5,31 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DatabaseService {
     private meta;
+    private lekcija;
+
     constructor(private http: Http) {}
     folder = 'assets/data/'
     _http(url) {
         return this.http.get(url)
             .map(response => < any[] > response.json().data);
     }
-    public getLesson() {}
+    public getLesson(info): Promise < Object > {
+        // console.log(info);
+        let url = 'assets/data/'+ info["predmet"] + '/' + info["cjelina"] + '/' + info["lekcija"] + '/' + info["jedinica"] + '.json';
+        return new Promise((resolve, reject) => {
+            this.http.get(url)
+                .map((response: Response) => {
+                    let a = response.json();
+                    return a;
+                })
+                .subscribe((data) => {
+                    let d = data;
+                    resolve(d);
+                });
+
+        })
+
+    }
     public getMeta(): Promise < Object > {
         return new Promise((resolve, reject) => {
             if (!this.meta) {
@@ -22,7 +40,6 @@ export class DatabaseService {
                     })
                     .subscribe((data) => {
                         this.meta = data;
-                        console.log(this.meta);
                         resolve(this.meta)
                     });
             } else {

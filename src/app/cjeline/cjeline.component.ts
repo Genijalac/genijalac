@@ -18,7 +18,7 @@ export class CjelineComponent implements OnInit {
             this.DB.getMeta().then(res=>{
                 this.data = res[this.predmetLink]["cjeline"];
                 this.predmet = res[this.predmetLink]["predmet"][0];
-                console.log(this.data);
+              
             })
         })
     }

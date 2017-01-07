@@ -31,7 +31,6 @@ export class LekcijeComponent implements OnInit {
                 })
                 this.data = holder["data"];
                 this.cjelinaIme = holder["cjelina"][0];
-                console.log(this.data);
             })
         })
     }
